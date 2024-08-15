@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: custom-range-slider-deployment
+  name: range-slider-deployment
 spec:
-  replicas: 2  # Number of desired replicas
+  replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: custom-range-slider
+      app: range-slider
   template:
     metadata:
       labels:
-        app: custom-range-slider
+        app: range-slider
     spec:
       containers:
-      - name: custom-range-slider
-        image: rameshkumarverma/custom-range-slider
+      - name: range-slider
+        image: yash5090/range-slider:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
